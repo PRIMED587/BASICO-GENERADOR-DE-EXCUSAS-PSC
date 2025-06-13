@@ -1,3 +1,7 @@
+
+
+
+![Generador de Excusas JAVA](https://github.com/user-attachments/assets/98f6363b-1994-4d3b-9677-50f963467782)
 <!-- hide -->
 # Hello World with Vanilla JS
 
