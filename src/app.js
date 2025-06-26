@@ -24,9 +24,8 @@ document.addEventListener("DOMContentLoaded", () => {
     btnGenerar.addEventListener("click", cargar);
   }
 
-  // Cargar una excusa automáticamente cuando se abre el modal
   const modal = document.getElementById("exampleModal");
   if (modal) {
-    modal.addEventListener("show.bs.modal", cargar);
+    modal.addEventListener("shown.bs.modal", cargar); // cambiado aquí
   }
 });
