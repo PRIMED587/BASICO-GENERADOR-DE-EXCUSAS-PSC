@@ -15,13 +15,20 @@ function cargar() {
   const excusahtml = document.getElementById("excusahtml");
   if (excusahtml) {
     excusahtml.innerHTML = genEx();
+  } else {
+    console.warn("No se encontró el elemento #excusahtml");
   }
 }
 
-// Esperar a que el modal se abra para generar excusa automáticamente
+// Ejecutar al abrir el modal
 document.addEventListener("DOMContentLoaded", () => {
   const modal = document.getElementById("exampleModal");
-  modal.addEventListener("show.bs.modal", () => {
-    cargar(); // Genera una excusa al abrir el modal
-  });
+  if (modal) {
+    modal.addEventListener("show.bs.modal", () => {
+      cargar();
+    });
+  }
 });
+
+// ✅ Hacerla accesible desde el HTML (onclick)
+window.cargar = cargar;
