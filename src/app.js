@@ -21,14 +21,22 @@ function cargar() {
 }
 
 // Ejecutar al abrir el modal
+// ... tus arrays y funciones genEx, cargar (igual que antes)
+
 document.addEventListener("DOMContentLoaded", () => {
   const modal = document.getElementById("exampleModal");
   if (modal) {
     modal.addEventListener("show.bs.modal", () => {
-      cargar();
+      cargar(); // genera excusa al abrir modal
+    });
+  }
+
+  // Referencia al botón Generar Excusa en el modal
+  const btnGenerar = document.getElementById("btnGenerarExcusa");
+  if (btnGenerar) {
+    btnGenerar.addEventListener("click", () => {
+      cargar(); // genera excusa al hacer click
     });
   }
 });
 
-// ✅ Hacerla accesible desde el HTML (onclick)
-window.cargar = cargar;
