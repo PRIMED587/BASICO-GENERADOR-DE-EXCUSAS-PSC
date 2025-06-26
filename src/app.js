@@ -14,29 +14,19 @@ function genEx() {
 function cargar() {
   const excusahtml = document.getElementById("excusahtml");
   if (excusahtml) {
-    excusahtml.innerHTML = genEx();
-  } else {
-    console.warn("No se encontró el elemento #excusahtml");
+    excusahtml.textContent = genEx();
   }
 }
 
-// Ejecutar al abrir el modal
-// ... tus arrays y funciones genEx, cargar (igual que antes)
-
 document.addEventListener("DOMContentLoaded", () => {
-  const modal = document.getElementById("exampleModal");
-  if (modal) {
-    modal.addEventListener("show.bs.modal", () => {
-      cargar(); // genera excusa al abrir modal
-    });
-  }
-
-  // Referencia al botón Generar Excusa en el modal
   const btnGenerar = document.getElementById("btnGenerarExcusa");
   if (btnGenerar) {
-    btnGenerar.addEventListener("click", () => {
-      cargar(); // genera excusa al hacer click
-    });
+    btnGenerar.addEventListener("click", cargar);
+  }
+
+  // Cargar una excusa automáticamente cuando se abre el modal
+  const modal = document.getElementById("exampleModal");
+  if (modal) {
+    modal.addEventListener("show.bs.modal", cargar);
   }
 });
-
