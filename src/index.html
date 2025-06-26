@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="./assets/img/4geeks.ico" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
+integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous" />
+  <title>Generador de Excusas</title>
+  
+<body>
+  <div id="contenido">
+    <h1><strong>Generador de Excusas</strong></h1>
+  </div>
+  <div id="descripcion">
+      <p><strong>Un generador de excusas aleatorias es una herramienta que genera excusas de manera aleatoria para evitar una
+        situación incómoda. Se puede usar en forma de proyecto en JavaScript o como aplicación. </strong> </p>
+<ul>
+  <h3>Cómo funciona</h3>
+  <li>Genera aleatoriamente cada parte de la oración </li>
+  <li>Concatena los elementos de los arreglos en el orden correcto para crear una excusa consistente </li>
+</ul>
+<ul>
+  <h3>Usos</h3>
+  <li>Para salir de un problema en una situación difícil </li>
+  <li>Para faltar a una reunión social o llegar tarde a una reunión</li>
+</ul>
+    </div>
+  </div>
+  <div>
+    <button id="prueba" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+      Prueba
+    </button>
+    
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">LA EXCUSA DE HOY ES QUE:</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p id="excusahtml">
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary" onclick="cargar();">Generar Excusa</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <p id="excusahtml"></p>
+
+  <script src="app.js"></script>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+
+</html>

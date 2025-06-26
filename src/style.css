@@ -1,0 +1,97 @@
+body {
+    padding-top: 100px;
+    background-color: rgb(34, 34, 34);
+}
+
+#contenido {
+    
+    
+    background-color: cornflowerblue;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    color: ghostwhite;
+    text-align: center;
+    width: 50%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left: 25%;
+    padding: 20px 20px 20px 20px;
+    border-radius: 300px 10px 300px 10px;
+    
+
+
+}
+
+#descripcion {
+    background-color: rgb(125, 100, 237);
+    padding: 20px 20px 20px 60px;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    color: ghostwhite;
+    margin-left: 25%;
+    width: 50%;
+    border-radius: 2px 2px 40px 40px;
+    
+
+}
+#descripcion ul h3 {
+    color: yellow;
+}
+
+
+
+#prueba {
+    margin-top: 50px;
+    padding: 20px 20px 20px 20px;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    width: 30%;
+    margin-left: 35%;
+
+}
+
+
+
+
+/**
+
+body {
+  
+    color: #67ede8;
+    background-color: black;
+    width: 90%;
+    height: 40%;
+    border: 1px solid black;
+    border-radius: 300px 10px 300px 10px;
+      
+    
+}
+
+#contenido {
+    background-color: cornflowerblue;
+    font-family: 'Courier New', Courier, monospace;
+    color:ghostwhite;
+    text-align: center;
+    border-radius: 300px 10px 300px 10px;
+    font-size: 40px;
+    font-weight: bold;
+    padding: 10px;
+    margin: 50px
+    
+
+}
+
+#excusahtml {
+    color: aliceblue;
+    font-family: 'Courier New', Courier, monospace;
+    border-radius: 300px 10px 300px 10px;
+
+}
+
+/**
