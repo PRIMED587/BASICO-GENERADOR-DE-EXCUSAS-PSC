@@ -1,22 +1,27 @@
-
 let quien = ['Maria', 'Juan', 'Fulano', 'Perencejo', 'Mengano'];
-let accion = ['rompio', 'aplastó', 'rayo', 'ensucio', 'acomodo'];
-let objeto = ['el auto', 'la casa', 'la bici', 'la moto', 'el computador']
-let cuando = ['Empezando el dia', 'En la noche', 'durante el almuerzo', 'el fin de semana'];
+let accion = ['rompió', 'aplastó', 'rayó', 'ensució', 'acomodó'];
+let objeto = ['el auto', 'la casa', 'la bici', 'la moto', 'el computador'];
+let cuando = ['empezando el día', 'en la noche', 'durante el almuerzo', 'el fin de semana'];
 
-function genEx(quien, accion, objeto, cuando) {
-    numquien = Math.floor(Math.random() * quien.length);
-    numque = Math.floor(Math.random() * accion.length);
-    numobjeto = Math.floor(Math.random() * objeto.length);
-    numcuando = Math.floor(Math.random() * cuando.length);
-    return quien[numquien] + " " + accion[numque] + " " + objeto[numobjeto] + " " + cuando[numcuando];
+function genEx() {
+  const numquien = Math.floor(Math.random() * quien.length);
+  const numaccion = Math.floor(Math.random() * accion.length);
+  const numobjeto = Math.floor(Math.random() * objeto.length);
+  const numcuando = Math.floor(Math.random() * cuando.length);
+  return `${quien[numquien]} ${accion[numaccion]} ${objeto[numobjeto]} ${cuando[numcuando]}`;
 }
+
 function cargar() {
-    var excusahtml = document.getElementById("excusahtml");
-    excusahtml.innerHTML = genEx(quien, accion, objeto, cuando);
-    
+  const excusahtml = document.getElementById("excusahtml");
+  if (excusahtml) {
+    excusahtml.innerHTML = genEx();
+  }
 }
 
-cargar();
-console.log(cargar);
-
+// Esperar a que el modal se abra para generar excusa automáticamente
+document.addEventListener("DOMContentLoaded", () => {
+  const modal = document.getElementById("exampleModal");
+  modal.addEventListener("show.bs.modal", () => {
+    cargar(); // Genera una excusa al abrir el modal
+  });
+});
